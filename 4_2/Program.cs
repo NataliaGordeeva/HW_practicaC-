@@ -3,16 +3,19 @@
 
 Console.WriteLine("введите число = ");
 int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("сумма цифр = "+ GetSummary(num));
+string result = Convert.ToString(num);
 
-int GetSummary (int number)
-{
-   int sum = 0;
-   {
-   for (int i = 0; i < Ch.Count; i++)
-   sum = sum + i;
-   }
+int sum = result[0];
+Console.WriteLine(sum);
 
-  return sum;
-}
+// int GetSummary (int number)
+// {
+//    int sum = 0;
+//    {
+//    for (int i = 0; i < Ch.Count; i++)
+//    sum = sum + i;
+//    }
+
+//   return sum;
+// }
 
