@@ -9,12 +9,14 @@ for(int i=0; i<size; i++)
 {
 array[i]=new Random().Next(100, 1000);
 int a= array[i]%2;
+
 if (a==0)
 {
-  PlusQ += array[i];
+  PlusQ ++;
+  
 }
 }
 Console.WriteLine("[{0}]", String.Join(";", array));
-Console.WriteLine("сумма четных ="+"  "+PlusQ);
+Console.WriteLine("колличество четных ="+"  "+PlusQ);
 
 
