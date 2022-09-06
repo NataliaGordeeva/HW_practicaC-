@@ -11,13 +11,14 @@ for(int i=0; i<size; i++)
 {
 array[i]=new Random().Next(0, 100);
 
-int num= array[i]%2;
-if (num!=0)
+
+int num=i%2;
+if (num==0)
 {
   SumNeg += array[i];
 }
 }
-Console.WriteLine("[{0}]", String.Join(";", array));
 
+Console.WriteLine("[{0}]", String.Join(";", array));
 Console.WriteLine("сумма нечетных элементов ="+"  "+SumNeg);
 
