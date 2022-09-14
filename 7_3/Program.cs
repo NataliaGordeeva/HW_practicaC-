@@ -10,7 +10,7 @@ int rows = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите количество столбцов = ");
 int columns = Convert.ToInt32(Console.ReadLine());
-double sum1 =0;
+double sum =0;
 
 int [,] matrix =new int[rows,columns];
 for (int i=0; i<matrix.GetLength(0);i++)
@@ -18,14 +18,14 @@ for (int i=0; i<matrix.GetLength(0);i++)
     for (int j=0; j<matrix.GetLength(1);j++)
     {
         matrix[i,j]=new Random().Next(0,21);
-        if (i<rows && j == 0)
-        {
-            sum1=sum1+matrix[i,j]/rows;
-        }
-        
+                
         Console.Write(matrix[i,j]+"\t");
     }
     Console.WriteLine();
     }
-Console.WriteLine($"среднее арифметическое элементов 1 столбца = {sum1}");
+for (int i=0; i<rows;i++)
+{
+    sum += matrix[i,0]/rows;
+}    
+Console.WriteLine($"среднее арифметическое элементов 1 столбца = {sum}");
 
