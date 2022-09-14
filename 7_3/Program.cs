@@ -5,31 +5,27 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-Console.WriteLine("Введите количество строк: ");
+Console.WriteLine("Введите количество строк = ");
 int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов: ");
+
+Console.WriteLine("Введите количество столбцов = ");
 int columns = Convert.ToInt32(Console.ReadLine());
+double sum1 =0;
 
-int[,] array = new int[rows,columns];
-int sum=0;
-int countJ=0;
-for(int i=0; i<rows; i++)
+int [,] matrix =new int[rows,columns];
+for (int i=0; i<matrix.GetLength(0);i++)
 {
-    for(int j=0; j<columns; j++)
+    for (int j=0; j<matrix.GetLength(1);j++)
     {
-        array[i,j]=new Random().Next(0,11);
-
-        // for (j=0;j<columns;j++)
-        // {
-        //     sum+=j;
-        //     countJ++;
-            
-        // }
+        matrix[i,j]=new Random().Next(0,21);
+        if (i<rows && j == 0)
+        {
+            sum1=sum1+matrix[i,j]/rows;
+        }
         
-    Console.Write(array[i,j] + "\t");
+        Console.Write(matrix[i,j]+"\t");
     }
-Console.WriteLine();
-}
-Console.Write($"сумма = {sum}");
-
+    Console.WriteLine();
+    }
+Console.WriteLine($"среднее арифметическое элементов 1 столбца = {sum1}");
 
